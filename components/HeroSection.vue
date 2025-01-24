@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex items-center bg-white z-0">
+  <div class="h-screen flex w-full items-center bg-white z-0">
     <!-- Dégradé bleu en bas -->
     <div
       class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-blue-600/40 to-transparent pointer-events-none z-1">
@@ -22,10 +22,10 @@
         </p>
         <div class="flex items-center space-x-6">
           <!-- Bouton Get Started -->
-          <NuxtLink to="/get-started"
-            class="bg-black text-white hover:bg-gray-800 transition-colors text-lg px-8 py-3 rounded-md">
-            Get Started
-          </NuxtLink>
+          <UButton href="/sign-up" color="black" class="transition ease-in-out delay-100" icon="i-heroicons-arrow-up-right" :trailing="true"
+            :ui="{ rounded: 'rounded-full' }">
+            <span class="text-lg px-6 py-1">Get Started</span>
+          </UButton>
           <!-- Bouton Join Community -->
           <NuxtLink to="/" class="underline underline-offset-4">
             Join Community

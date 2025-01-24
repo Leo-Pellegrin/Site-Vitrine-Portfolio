@@ -14,10 +14,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, defineProps } from 'vue'
 
-/**
- * Définition des props : 
- * - text (String) : le texte à afficher et animer 
- */
 const props = defineProps({
   text: {
     type: String,
@@ -25,42 +21,38 @@ const props = defineProps({
   },
 })
 
-// Références aux éléments DOM
 const aboutWrap = ref(null)
 const aboutTitleHover = ref(null)
 const grayText = ref(null)
 const whiteText = ref(null)
 
 const handleScroll = () => {
-  const wrapEl = aboutWrap.value
-  const hoverEl = aboutTitleHover.value
-  const grayEl = grayText.value
-  const whiteEl = whiteText.value
-  if (!wrapEl || !hoverEl || !grayEl || !whiteEl) return
-
-  // Récupère la position de l'élément par rapport à la fenêtre
-  const rect = wrapEl.getBoundingClientRect()
+  if (!aboutWrap.value || !aboutTitleHover.value || !grayText.value || !whiteText.value) return
   
-  // Calcule la partie "visible" selon la hauteur de la fenêtre
-  const visibleHeight = window.innerHeight - rect.top
-  // ratio entre 0 et 1
-  const ratio = Math.min(Math.max(visibleHeight / rect.height, 0), 1)
+  const rect = aboutWrap.value.getBoundingClientRect()
+  
+  // Décalage pour commencer l'animation au dernier 1/4 de l'écran
+  const offset = 0.75
+  const visibleHeight = (window.innerHeight * offset) - rect.top
+  let ratio = visibleHeight / rect.height
+  if (ratio < 0) ratio = 0
+  if (ratio > 1) ratio = 1
+  
+  // Largeur de la zone "hover" (effet de remplissage)
+  aboutTitleHover.value.style.width = `${ratio * 100}%`
 
-  // Ajuste la largeur de la zone "hover" (effet de remplissage)
-  hoverEl.style.width = `${ratio * 100}%`
-
-  // Modifie la couleur des textes en fonction du ratio
+  // Au lieu de masquer le texte gris, on ne touche pas sa couleur.
+  // On gère uniquement le texte blanc.
   if (ratio > 0.5) {
-    grayEl.style.color = 'transparent'
-    whiteEl.style.color = 'black'
+    whiteText.value.style.color = 'white'
   } else {
-    grayEl.style.color = 'gray'
-    whiteEl.style.color = 'transparent'
+    whiteText.value.style.color = 'transparent'
   }
 }
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  handleScroll()
 })
 
 onBeforeUnmount(() => {
@@ -73,25 +65,30 @@ onBeforeUnmount(() => {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  font-size: 1.5rem;
 }
 
-.gray-text,
+/* Le texte gris reste toujours gris */
+.gray-text {
+  margin: 0;
+  color: gray; 
+  transition: color 1s ease; /* Transition facultative */
+}
+
+/* Le texte blanc est au-dessus, contrôlé par .about-title-hover */
 .white-line-text {
   margin: 0;
-  font-size: 1.5rem;
-  color: gray;
-  transition: color 0.3s ease;
+  color: transparent; /* par défaut, invisible */
+  transition: color 1s ease;
 }
 
 .about-title-hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0%;
   height: 100%;
-  background-color: white; /* Couleur de "remplissage" */
   z-index: 2;
-  pointer-events: none;    /* Empêche l’interaction du curseur */
+  pointer-events: none;
+  transition: width 1s ease;
 }
 </style>
