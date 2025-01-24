@@ -1,0 +1,13 @@
+# header.yml
+title: "BlueCore"
+menu:
+  - label: "Home"
+    link: "/"
+  - label: "Pages"
+    link: "/pages"
+  - label: "About"
+    link: "/about"
+  - label: "Contact"
+    link: "/contact"
+  - label: "Feature"
+    link: "/feature"

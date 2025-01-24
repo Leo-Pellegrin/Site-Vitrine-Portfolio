@@ -1,7 +1,10 @@
 <template>
   <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <Header />
+    <NuxtPage />
   </div>
 </template>
+
+<style scoped>
+
+</style>

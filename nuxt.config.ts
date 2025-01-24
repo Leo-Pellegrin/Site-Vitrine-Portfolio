@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vite-pwa/nuxt',
     'nuxt-gtag',
-    // '@nuxtjs/tailwindcss',
+    //'@nuxtjs/tailwindcss',
     '@nuxt/fonts',
     '@nuxt/ui',
     '@nuxt/image'
@@ -39,6 +39,13 @@ export default defineNuxtConfig({
       'xxl': 1536,
       '2xl': 1536
     },
+  },
+  css: ['~/assets/css/main.css'],
+  fonts: {
+    families: [
+      { name: 'Inter-var', provider: 'google' },
+    ],
+    provider: 'google'
   }
 
   /** auth: {

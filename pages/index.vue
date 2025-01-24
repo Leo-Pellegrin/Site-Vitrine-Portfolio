@@ -1,13 +1,12 @@
 <template>
-  <div>
-    
-  </div>
+  <main>
+    <HeroSection />
+    <AboutSection />
+  </main>
 </template>
 
 <script lang="ts" setup>
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

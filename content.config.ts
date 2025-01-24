@@ -2,13 +2,15 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
 export default defineContentConfig({
   collections: {
-    authors: defineCollection({
+    header: defineCollection({
       type: 'data',
-      source: 'authors/**.yml',
+      source: 'header/**.yml',
       schema: z.object({
-        name: z.string(),
-        avatar: z.string(),
-        url: z.string()
+        title: z.string(),
+        menu: z.object({
+          label: z.string(),
+          link: z.string()
+        })        
       })
     })
   }
