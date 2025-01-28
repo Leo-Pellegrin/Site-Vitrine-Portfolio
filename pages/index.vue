@@ -5,6 +5,7 @@
     <UserGuideSection/>
     <FeatureSection/>
     <CommentSection/>
+    <PricingSection/>
   </main>
 </template>
 
