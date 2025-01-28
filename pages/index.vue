@@ -3,7 +3,8 @@
     <HeroSection />
     <AboutSection />
     <UserGuideSection/>
-    <FeatureSection2/>
+    <FeatureSection/>
+    <CommentSection/>
   </main>
 </template>
 

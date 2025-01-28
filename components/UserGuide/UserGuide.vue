@@ -26,7 +26,7 @@
 const cards = [
   { title: "Discover our platform", description: "Start your journey by exploring our user-friendly platform." },
   { title: "Customize to your liking", description: "Make it yours. Customize to create a personalized experience." },
-  { title: "Enjoy unparalleled performance", description: "Experience unparalleled performance to achieve more." },
+  { title: "Enjoy performance", description: "Experience unparalleled performance to achieve more." },
   { title: "Support and grow", description: "Rest assured with our dedicated support team." }
 ];
 
