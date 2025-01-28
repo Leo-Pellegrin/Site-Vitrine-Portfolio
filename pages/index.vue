@@ -6,6 +6,7 @@
     <FeatureSection/>
     <CommentSection/>
     <PricingSection/>
+    <SubscriptionSection/>
   </main>
 </template>
 
