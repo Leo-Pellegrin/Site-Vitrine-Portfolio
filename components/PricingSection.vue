@@ -1,5 +1,6 @@
 <template>
-  <section class="p-24 bg-gray-50">
+  <section class="p-24 bg-gray-50  opacity-0 transform translate-y-10 transition-all duration-700"
+    ref="globalSectionRef">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Titre et toggle -->
@@ -19,7 +20,7 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 const isAnnual = ref(false);
 
@@ -65,4 +66,25 @@ const pricingPlans = [
     isHighlighted: true
   }
 ];
+
+const globalSectionRef = ref < HTMLElement | null > (null);
+// Observer la section globale pour appliquer l'animation
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100", "translate-y-0");
+        } else {
+          entry.target.classList.remove("opacity-100", "translate-y-0");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  if (globalSectionRef.value) {
+    observer.observe(globalSectionRef.value);
+  }
+});
 </script>
