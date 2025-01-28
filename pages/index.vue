@@ -2,6 +2,8 @@
   <main>
     <HeroSection />
     <AboutSection />
+    <UserGuideSection/>
+    <FeatureSection2/>
   </main>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen flex w-full items-center bg-white z-0">
+  <div class="relative h-screen flex w-full items-center bg-white z-0">
     <!-- Dégradé bleu en bas -->
     <div
       class="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-blue-600/40 to-transparent pointer-events-none z-1">
@@ -9,7 +9,7 @@
     </div>
 
     <!-- Contenu de la section Hero -->
-    <div class="container mx-auto grid md:grid-cols-2 gap-12 relative z-10">
+    <div class="container -mt-20 mx-auto grid md:grid-cols-2 gap-12 relative z-10">
       <!-- Texte de présentation -->
       <div class="space-y-8 animate-fade-in">
         <h1 class="text-5xl md:text-6xl font-bold leading-tight">

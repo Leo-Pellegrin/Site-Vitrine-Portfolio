@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full" v-if="header">
+  <header class="sticky w-full" v-if="header">
     <div class="flex justify-between mx-auto mt-8">
       <!-- Header Title -->
       <p class="text-3xl uppercase ml-6">{{ header.title }}</p>
