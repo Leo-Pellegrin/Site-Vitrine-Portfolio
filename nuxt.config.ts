@@ -47,6 +47,11 @@ export default defineNuxtConfig({
       { name: 'Inter-var', provider: 'google' },
     ],
     provider: 'google'
+  },
+  nitro: {
+    experimental: {
+      openAPI: true
+    }
   }
 
   /** auth: {
