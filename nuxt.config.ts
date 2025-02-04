@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     //'@nuxtjs/tailwindcss',
     '@nuxt/fonts',
     '@nuxt/ui',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxthub/core'
   ],
   plugins: [
     { src: '~/plugins/recaptcha.ts', mode: 'client' },

@@ -17,6 +17,7 @@
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui": "^2.21.0",
+    "@nuxthub/core": "^0.8.16",
     "@nuxtjs/recaptcha": "^1.1.2",
     "@nuxtjs/robots": "^5.2.2",
     "@nuxtjs/sitemap": "^7.2.2",
@@ -31,6 +32,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "npm:@nuxtjs/tailwindcss@nightly"
+    "@nuxtjs/tailwindcss": "npm:@nuxtjs/tailwindcss@nightly",
+    "wrangler": "^3.107.3"
   }
 }
