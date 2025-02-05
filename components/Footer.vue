@@ -66,24 +66,24 @@
 <script setup>
 const pagesLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Feature', href: '/feature' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-  { name: 'Career', href: '/career' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Privacy Policy', href: '/privacy-policy' }
+  { name: 'About', href: '/#' },
+  { name: 'Feature', href: '/#' },
+  { name: 'Blog', href: '/#' },
+  { name: 'Contact', href: '/#' },
+  { name: 'Career', href: '/#' },
+  { name: 'Pricing', href: '/#' },
+  { name: 'Privacy Policy', href: '/#' }
 ];
 
 const utilityLinks = [
-  { name: 'Style Guide', href: '/style-guide' },
-  { name: 'Instructions', href: '/instructions' },
-  { name: 'Licenses', href: '/licenses' },
-  { name: 'Changelog', href: '/changelog' },
-  { name: 'Link in Bio', href: '/link-in-bio' },
-  { name: 'Coming Soon', href: '/coming-soon' },
-  { name: 'Password Protected', href: '/password-protected' },
-  { name: 'Error 404', href: '/404' }
+  { name: 'Style Guide', href: '/#' },
+  { name: 'Instructions', href: '/#' },
+  { name: 'Licenses', href: '/#' },
+  { name: 'Changelog', href: '/#' },
+  { name: 'Link in Bio', href: '/#' },
+  { name: 'Coming Soon', href: '/#' },
+  { name: 'Password Protected', href: '/#' },
+  { name: 'Error 404', href: '/#' }
 ];
 </script>
 

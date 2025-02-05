@@ -22,9 +22,28 @@ export default defineNuxtConfig({
     '@nuxthub/core'    // Intégration de Nuxthub (module de gestion)
   ],
 
+  // 🌍 SEO : Configuration des balises Meta globales
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      title: 'DigitalWave - Agence Web & SEO',
+      meta: [
+        { name: 'description', content: 'Agence digitale spécialisée en création de sites web, SEO et marketing digital.' },
+        { name: 'keywords', content: 'agence web, création site internet, SEO, marketing digital' },
+        { property: 'og:title', content: 'DigitalWave - Agence Web & SEO' },
+        { property: 'og:description', content: 'Boostez votre présence en ligne avec notre expertise en développement web et SEO.' },
+        { property: 'og:image', content: 'https://digitalwave.com/og-image.jpg' },
+        { property: 'og:url', content: 'https://digitalwave.com' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@digitalwave' }
+      ],
+    },
+  },
+
   // 🔌 Plugins à charger côté client
   plugins: [
-    { src: '~/plugins/recaptcha.ts', mode: 'client' },
+    // { src: '~/plugins/recaptcha.ts', mode: 'client' },
     { src: '~/plugins/auto-animate.ts', mode: 'client' }
   ],
 

@@ -1,7 +1,7 @@
 <template>
   <!-- Grille 2 colonnes : un "Placeholder" à gauche et les features à droite -->
   <div class="grid grid-cols-3 w-full mt-5">
-    <PlaceHolder class="col-span-1"/>
+    <div class="col-span-1"/>
 
     <div ref="features" class="col-span-2 mt-20 transition-opacity duration-700" :style="{ opacity: featuresOpacity }">
       <h2 class="text-5xl font-bold mb-16">

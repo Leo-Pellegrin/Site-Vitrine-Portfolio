@@ -48,8 +48,7 @@
             <p class="text-left text-gray-600 text-md mt-8">Experience a new level of connectivity and unlock the full
               potential of your digital ecosystem.</p>
           </div>
-          <div class="flex mt-4">
-            <Placeholder class="h-20" />
+          <div class="flex mt-4 h-20">            
           </div>
         </div>
 

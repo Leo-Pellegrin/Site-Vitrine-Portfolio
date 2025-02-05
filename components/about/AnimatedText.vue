@@ -12,7 +12,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, defineProps } from 'vue'
 
 const props = defineProps({
   text: {
