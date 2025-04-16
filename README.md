@@ -1,145 +1,100 @@
-# 🌐 Site-Vitrine-Portfolio - Exemple de Site Vitrine Professionnel  
-![DigitalWave Banner](https://digitalwave.com/og-image.jpg)
+# 🌐 Site‑Vitrine‑Portfolio — Projet personnel
 
-## 🚀 Présentation  
-Ce projet est un **exemple de site vitrine moderne et performant** que je propose à mes clients.  
-Il met en avant une activité, une entreprise ou un portfolio en offrant une **expérience utilisateur fluide et optimisée pour le référencement (SEO)**.  
+![Banner](assets/banner-demo.jpg) <!-- Remplace par ton image ou retire cette ligne -->
 
-🎯 **Pourquoi ce projet ?**  
-- 💡 **Design professionnel & responsive**  
-- ⚡ **Optimisé pour la rapidité & SEO**  
-- 🔍 **Visibilité maximale sur Google et réseaux sociaux**  
-- 📱 **Adapté aux mobiles & tablettes**  
-- 🔥 **Facile à personnaliser pour vos besoins spécifiques**  
+> Un site vitrine moderne développé avec **Nuxt 3 + Tailwind CSS** pour mettre en pratique mes compétences **full‑stack, SEO et performance**.
 
 ---
 
-## 📸 Démo  
-🔗 [Lien vers la démo](https://digitalwave.com) *(Remplace par ton URL de démo)*  
-
-📷 **Aperçu :**  
-![Preview](https://digitalwave.com/site-preview.jpg)  
-
----
-
-## 🛠️ Fonctionnalités  
-✅ **Accueil attractif** avec une section héroïque engageante  
-✅ **Présentation des services** de manière claire et structurée  
-✅ **Témoignages clients** pour renforcer la crédibilité  
-✅ **Optimisation SEO** avec **balises meta, sitemap & robots.txt**  
-✅ **Prise de contact facile** avec un formulaire efficace  
-✅ **Intégration des réseaux sociaux** *(Twitter, Facebook, LinkedIn...)*  
-✅ **Optimisation des performances** *(Lazy loading, cache, compression d’images...)*  
-✅ **Mode PWA (Progressive Web App)** pour une **navigation fluide hors ligne**  
+## 🚀 Objectifs du projet
+- **Exploration Nuxt 3** : routing, server‑side rendering (SSR) et composables.
+- **UI responsive** : design propre, adaptable mobiles / tablettes / desktop.
+- **Optimisation SEO & accessibilité** : balises metas, sitemap.xml, robots.txt, ARIA.
+- **Performance web** : lazy‑loading d’images, PWA, compression et cache.
+- **Structuration type “vitrine”** : accueil, services, témoignages, contact.
 
 ---
 
-## 📂 Structure du projet  
-
-/Site-Vitrine-Portfolio
-│── /assets        # Images, icônes et fichiers statiques
-│── /components    # Composants réutilisables Vue.js
-│── /layouts       # Layouts globaux pour le site
-│── /pages         # Pages principales du site
-│── /public        # Ressources accessibles publiquement
-│── /styles        # Fichiers CSS et styles globaux
-│── /utils         # Fonctions utilitaires
-│── nuxt.config.ts # Configuration Nuxt (SEO, PWA, etc.)
-│── package.json   # Dépendances et scripts
-│── README.md      # Documentation du projet
+## 🛠️ Fonctionnalités clés
+- Page **Accueil** avec section héroïque animée (Vue transitions).
+- Section **Services / Projets** alimentée par fichiers Markdown.
+- **Témoignages** statiques (ou JSON) affichés sous forme de cartes.
+- **Formulaire de contact** : validation côté client (Vee‑validate) + hook mail (server API).
+- **Optimisation SEO** :  
+  - Nuxt SEO module (meta, OG tags).  
+  - Sitemap & robots.txt auto‑générés.  
+- **PWA** : installation offline, icône, manifest.json.
+- **Nuxt Image** : redimensionnement et formats modernes (WebP, AVIF).
 
 ---
 
-## 💻 Technologies utilisées  
-🚀 **Framework :** [Nuxt 3](https://nuxt.com/) (Vue.js 3)  
-🎨 **UI Framework :** [Tailwind CSS](https://tailwindcss.com/) *(ou autre si utilisé)*  
-🔍 **SEO & Analytics :**  
-- **Nuxt SEO Module** pour les balises meta  
-- **Google Analytics (nuxt-gtag)** pour suivre les visiteurs  
-- **Sitemap & Robots.txt** pour un référencement optimal  
-
-⚡ **Optimisations :**  
-- **Nuxt Image** pour des images optimisées  
-- **PWA** pour un mode hors ligne et une meilleure performance  
-- **Lazy Loading & Caching** pour accélérer le chargement  
+## 💻 Stack & outils
+| Catégorie | Choix | Pourquoi ? |
+|-----------|-------|------------|
+| **Framework** | **Nuxt 3 (Vue 3)** | SSR/SSG, composables, DX moderne |
+| **UI** | **Tailwind CSS** | Rapidité de prototypage, responsive natif |
+| **State / Content** | Nuxt Content + auto‑import | Rendu Markdown + typographie |
+| **SEO** | `@nuxtjs/seo` | Balises meta, OG, JSON‑LD |
+| **PWA** | `@vite-pwa/nuxt` | Cache, manifest, offline |
+| **Images** | `@nuxt/image` | Formats next‑gen, lazy‑loading |
+| **Tests** | Vitest + Playwright (à venir) | Assurance qualité |
+| **CI/CD** | GitHub Actions | Lint, tests, déploiement Vercel |
 
 ---
 
-## 📦 Installation & Déploiement  
+## ⚡ Performances & bonnes pratiques
+- `nuxt build --analyze` pour inspecter les bundles.
+- Compression Brotli + Gzip activée sur Vercel.
+- Images <source set> générées automatiquement.
+- Scores cibles Lighthouse : **Performance ≥ 90**, **A11y ≥ 90**, **SEO ≥ 95**.
 
-### 💾 Prérequis  
-- **Node.js** >= 16.x  
-- **Nuxt 3** installé (`npm install -g nuxt`)  
-
-### 🔧 Installation locale  
-```sh
-# 1️⃣ Cloner le projet
-git clone https://github.com/ton-repo/Site-Vitrine-Portfolio.git
-
-# 2️⃣ Se déplacer dans le dossier
-cd Site-Vitrine-Portfolio
-
-# 3️⃣ Installer les dépendances
-npm install
-
-# 4️⃣ Lancer le serveur en local
-npm run dev
-```
-
-➡️ Le site sera accessible sur http://localhost:3000
 ---
 
-## 🚀 Déploiement  
+## 📦 Installation locale
 
-### 📌 Sur Vercel  
-```sh
-npx vercel
-```
+```bash
+# 1. Cloner
+git clone https://github.com/USERNAME/site-vitrine-portfolio.git
+cd site-vitrine-portfolio
 
-### 📌 Sur Netlify
-```sh
-netlify deploy
-```
+# 2. Dépendances
+pnpm install          # ou npm / yarn
 
-### 📌 Sur un serveur VPS
-```sh
-# Construire le projet
-npm run build
-
-# Démarrer en production
-npm run start
+# 3. Dev server
+pnpm dev
+# http://localhost:3000
 ```
 
 --- 
 
-## 🛠️ Personnalisation
+## Déploiement
 
-- 🖌 Changer les couleurs et polices → Modifier tailwind.config.js (ou styles globaux)
-- 🖼 Remplacer les images & logos → Remplace les fichiers dans /assets/images/
-- 📝 Modifier le contenu → Modifier les fichiers dans /content/
+```bash
+- Vercel : vercel --prod
+- Netlify : netlify deploy --prod
+- VPS :
+  - pnpm build
+  - pnpm start
+```
 
---- 
+---
 
-## 📩 Contact & Support
+## 🤝 Contributions
 
-📧 Email : leo.pellegrin87@gmail.com 
-🌐 Site Web : 
+Projet personnel ; les PR sont bienvenues pour améliorations ou suggestions.
+Ouvrez une issue pour toute fonctionnalité intéressante !
 
-Si vous avez des questions ou souhaitez un site vitrine sur mesure, contactez-moi ! 🚀
+---
 
---- 
+## 📄 Licence
+Ce projet est distribué sous la **licence MIT**.  
+Consulte le fichier [LICENSE](LICENSE) pour les détails complets.
 
-## 📝 Licence
+---
 
-Ce projet est sous licence MIT – vous pouvez l’utiliser et le modifier librement.
+## 🙋 Contact
+- **GitHub :** [@LeoPellegrin](https://github.com/LeoPellegrin)  
+- **LinkedIn :** [leo‑pellegrin](https://www.linkedin.com/in/leo-pellegrin/)  
+- **Courriel :** leo.pellegrin87@gmail.com
 
---- 
-
-## 🎯 Pourquoi me choisir pour votre site vitrine ?
-
-✅ Expérience en développement web & SEO
-✅ Sites modernes et performants
-✅ Support & accompagnement personnalisé
-✅ Optimisation Google & Référencement avancé
-
-Je propose des solutions sur mesure pour booster votre visibilité en ligne. Contactez-moi dès maintenant ! 🚀
+> *Built with ❤️ & Nuxt 3 — always learning, always shipping.*
