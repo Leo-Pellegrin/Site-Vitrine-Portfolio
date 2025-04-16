@@ -1,7 +1,5 @@
 # 🌐 Site‑Vitrine‑Portfolio — Projet personnel
 
-![Banner](assets/banner-demo.jpg) <!-- Remplace par ton image ou retire cette ligne -->
-
 > Un site vitrine moderne développé avec **Nuxt 3 + Tailwind CSS** pour mettre en pratique mes compétences **full‑stack, SEO et performance**.
 
 ---
@@ -88,7 +86,6 @@ Ouvrez une issue pour toute fonctionnalité intéressante !
 
 ## 📄 Licence
 Ce projet est distribué sous la **licence MIT**.  
-Consulte le fichier [LICENSE](LICENSE) pour les détails complets.
 
 ---
 
